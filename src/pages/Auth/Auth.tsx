@@ -48,6 +48,7 @@ function Auth() {
     const { name, value } = e.target;
     setUserData((prev) => ({ ...prev, [name]: value }));
     setErrors((prev) => ({ ...prev, [name]: [] }));  // Clear the error for the specific field
+    setIsTyping(false);
   };
 
   type ToastType = TypeOptions;
